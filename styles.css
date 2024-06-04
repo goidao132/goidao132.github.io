@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: gray;
+}
+
+.calculator {
+    width: 300px; /* Definindo a largura da calculadora */
+    border-radius: 5px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #fff;
+}
+
+.calculator-screen {
+    width: 92%;
+    height: 60px; /* Reduzindo a altura da tela */
+    border: none;
+    background-color: #252525;
+    color: #fff;
+    text-align: right;
+    padding-right: 10px; /* Reduzindo o espaçamento à direita */
+    padding-left: 10px; /* Reduzindo o espaçamento à esquerda */
+    font-size: 1.5rem; /* Reduzindo o tamanho da fonte */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    height: 50px; /* Reduzindo a altura dos botões */
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+    font-size: 1rem; /* Reduzindo o tamanho da fonte */
+    color: #333;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button.operator {
+    background-color: #f9a825;
+    color: #fff;
+}
+
+button.equal-sign {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+button.all-clear {
+    background-color: #d32f2f;
+    color: #fff;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas de largura igual */
+    grid-gap: 10px; /* Espaçamento entre os itens */
+}
