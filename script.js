@@ -1,5 +1,5 @@
 const calculator = {
-    displayValue: '0',  // Valor atual mostrado na tela
+    displayValue: '0', // Valor atual mostrado na tela
     firstOperand: null, // Primeiro operando
     waitingForSecondOperand: false, // Indica se o segundo operando está sendo aguardado
     operator: null, // Operador atual
@@ -64,6 +64,8 @@ const performCalculation = {
     'exp': (firstOperand, secondOperand) => Math.pow(firstOperand, secondOperand)
 };
 
+
+// Função para lidar com funções avançadas (log e exp)
 // Função para lidar com funções avançadas (log e exp)
 function handleFunction(func) {
     const { displayValue } = calculator;
@@ -80,6 +82,29 @@ function handleFunction(func) {
     calculator.waitingForSecondOperand = false;
     calculator.operator = null;
     calculator.firstOperand = null;
+}
+
+
+
+
+
+
+function handleFunction(func) {
+    const { displayValue, firstOperand, waitingForSecondOperand } = calculator;
+    const inputValue = parseFloat(displayValue);
+
+    if (waitingForSecondOperand && calculator.operator === func) {
+        const result = performCalculation[func](firstOperand, inputValue);
+        calculator.displayValue = `${parseFloat(result.toFixed(7))}`;
+        calculator.waitingForSecondOperand = false;
+        calculator.operator = null;
+        calculator.firstOperand = null;
+    } else {
+        calculator.firstOperand = inputValue;
+        calculator.waitingForSecondOperand = true;
+        calculator.operator = func;
+        calculator.displayValue = '0';
+    }
 }
 
 // Função para resetar a calculadora

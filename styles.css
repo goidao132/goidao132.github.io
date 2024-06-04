@@ -4,11 +4,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: gray;
+    background-color: #47202028;
 }
 
 .calculator {
-    width: 300px; /* Definindo a largura da calculadora */
+    width: 300px;
     border-radius: 5px;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -17,24 +17,24 @@ body {
 
 .calculator-screen {
     width: 92%;
-    height: 60px; /* Reduzindo a altura da tela */
+    height: 60px;
     border: none;
     background-color: #252525;
     color: #fff;
     text-align: right;
-    padding-right: 10px; /* Reduzindo o espaçamento à direita */
-    padding-left: 10px; /* Reduzindo o espaçamento à esquerda */
-    font-size: 1.5rem; /* Reduzindo o tamanho da fonte */
+    padding-right: 10px;
+    padding-left: 10px;
+    font-size: 1.5rem;
     border-radius: 5px;
     margin-bottom: 10px;
 }
 
 button {
-    height: 50px; /* Reduzindo a altura dos botões */
+    height: 50px;
     border-radius: 5px;
     border: none;
     background-color: #f2f2f2;
-    font-size: 1rem; /* Reduzindo o tamanho da fonte */
+    font-size: 1rem;
     color: #333;
     margin: 5px;
     cursor: pointer;
@@ -57,6 +57,6 @@ button.all-clear {
 
 .calculator-keys {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Quatro colunas de largura igual */
-    grid-gap: 10px; /* Espaçamento entre os itens */
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
 }
